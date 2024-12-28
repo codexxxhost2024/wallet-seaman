@@ -1,33 +1,34 @@
-interface MenuItem {
-  icon: string;
-  label: string;
-  description?: string;
-  onClick: () => void;
-}
+import React from 'react';
 
-interface ProfileMenuProps {
-  items: MenuItem[];
-}
-
-export default function ProfileMenu({ items }: ProfileMenuProps) {
+const ProfileMenu: React.FC = () => {
   return (
-    <div className="space-y-2 mt-6">
-      {items.map((item) => (
-        <button
-          key={item.label}
-          onClick={item.onClick}
-          className="w-full flex items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100"
-        >
-          <span className="material-icons mr-3 text-gray-600">{item.icon}</span>
-          <div className="text-left">
-            <h3 className="font-medium">{item.label}</h3>
-            {item.description && (
-              <p className="text-sm text-gray-500">{item.description}</p>
-            )}
-          </div>
-          <span className="material-icons ml-auto text-gray-400">chevron_right</span>
-        </button>
-      ))}
+    <div className="mt-4">
+      <div className="bg-white rounded-lg shadow-md p-4">
+        <h3 className="text-lg font-semibold mb-2">Account Settings</h3>
+        <ul className="divide-y divide-gray-200">
+          <li className="py-2">Update PIN or Password</li>
+          <li className="py-2">Manage Payment Methods</li>
+        </ul>
+      </div>
+
+      <div className="bg-white rounded-lg shadow-md p-4 mt-4">
+        <h3 className="text-lg font-semibold mb-2">Privacy Settings</h3>
+        <ul className="divide-y divide-gray-200">
+          <li className="py-2">Enable/disable two-factor authentication</li>
+          <li className="py-2">Toggle visibility of certain profile details</li>
+        </ul>
+      </div>
+
+      <div className="bg-white rounded-lg shadow-md p-4 mt-4">
+        <h3 className="text-lg font-semibold mb-2">Notification Preferences</h3>
+        <ul className="divide-y divide-gray-200">
+          <li className="py-2">App notifications</li>
+          <li className="py-2">SMS alerts</li>
+          <li className="py-2">Email updates</li>
+        </ul>
+      </div>
     </div>
   );
-}
+};
+
+export default ProfileMenu;

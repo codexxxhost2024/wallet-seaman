@@ -4,7 +4,7 @@ const navItems = [
   { icon: 'anchor', label: 'Panyero', route: '/' },
   { icon: 'account_balance_wallet', label: 'Finance', route: '/wallet' },
   { icon: 'qr_code_scanner', label: 'Scan', route: '/scanqr' },
-  { icon: 'dns', label: 'Services', route: '/services' },
+    { icon: 'widgets', label: 'Services', route: '/services' },
   { icon: 'person', label: 'Profile', route: '/profile' }
 ];
 

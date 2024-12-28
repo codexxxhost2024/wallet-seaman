@@ -1,29 +1,27 @@
-import { Link } from 'react-router-dom';
+import React from 'react';
 
-export default function ProfileActions() {
+const ProfileActions: React.FC = () => {
   return (
-    <div className="grid grid-cols-2 gap-4 mt-6">
-      <Link 
-        to="/settings"
-        className="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100"
-      >
-        <span className="material-icons mr-3 text-gray-600">settings</span>
-        <div>
-          <h3 className="font-medium">Settings</h3>
-          <p className="text-sm text-gray-500">Account preferences</p>
+    <div className="mt-4">
+      <div className="bg-white rounded-lg shadow-md p-4">
+        <h3 className="text-lg font-semibold mb-2">Affiliate Program</h3>
+        <div className="flex items-center justify-between border-b py-2">
+          <span>Your Referral Code</span>
+          <div>
+            <span>ABC123XYZ</span>
+            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded ml-2">
+              Copy
+            </button>
+          </div>
         </div>
-      </Link>
-      
-      <Link 
-        to="/security"
-        className="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100"
-      >
-        <span className="material-icons mr-3 text-gray-600">security</span>
-        <div>
-          <h3 className="font-medium">Security</h3>
-          <p className="text-sm text-gray-500">PIN & face ID</p>
-        </div>
-      </Link>
+        <h4 className="text-md font-semibold mt-2">Referral History</h4>
+        <ul>
+          <li>Referral 1 - Reward: $5.00</li>
+          <li>Referral 2 - Reward: $5.00</li>
+        </ul>
+      </div>
     </div>
   );
-}
+};
+
+export default ProfileActions;

@@ -4,7 +4,6 @@ import WalletBalance from '../../components/WalletBalance';
 import PromoCard from '../../components/PromoCard';
 import ServiceGrid from '../../components/ServiceGrid';
 import RecentTransactions from '../../components/RecentTransactions';
-import BottomNav from '../../components/BottomNav';
 
 export default function HomePage() {
   return (
@@ -17,7 +16,6 @@ export default function HomePage() {
         <ServiceGrid />
         <RecentTransactions />
       </main>
-      <BottomNav />
     </div>
   );
 }

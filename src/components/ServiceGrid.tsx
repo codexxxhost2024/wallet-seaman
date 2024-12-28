@@ -8,6 +8,7 @@ const services = [
   { icon: '🚘', name: 'Vehicle', route: '/vehicle' },
   { icon: '🎮', name: 'Games', route: '/games' },
   { icon: '🎟', name: 'Lottery', route: '/lottery' },
+  { icon: '💰', name: 'Cash In', route: '/cashin' },
   { icon: '➕', name: 'More', route: '/more' }
 ];
 
